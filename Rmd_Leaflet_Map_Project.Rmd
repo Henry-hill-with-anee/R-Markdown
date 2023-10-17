@@ -1,0 +1,29 @@
+---
+title: "Rmd_Leaflet_Map_Project_week2"
+author: "amaan-123"
+date: "`r Sys.Date()`"
+output: html_document
+---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction
+This project is for the Coursera Data Science Specialization's Developing Data Products course. Its primary objective is to produce a web page through R Markdown that showcases a map generated with Leaflet and subsequently deploy this web page on platforms such as RPubs, etc.
+
+# Data Sources
+The latitude and longitude were taken from Google 
+
+# Packages
+```{r package_used}
+library(leaflet)
+```
+
+# Map of Mumbai, India: pinpointing The Gateway of India
+
+```{r}
+map <- leaflet() %>% addTiles() %>% 
+addMarkers(lat= 18.9220, lng= 72.8347, popup = "Mumbai, India")
+map
+```
+
